@@ -40,7 +40,7 @@ export const generateMorningInsight = async (logs: UniversalAnalysisLog[], setti
 
     try {
         const result = await executeWithRotation(async () => {
-            const content = await callGroqApi([{ role: "user", content: prompt }], "llama3-8b-8192");
+            const content = await callGroqApi([{ role: "user", content: prompt }], "llama-3.1-8b-instant");
             return content || "";
         });
 
